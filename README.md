@@ -2,7 +2,7 @@
 
 Primeiro projeto desenvolvido em Squad através do curso técnico<br>
 
-https://matheusalvarez.github.io/Projeto-CadastroDeAlunos/
+ https://innovation-skyline0.github.io/Cadastro-de-Aluno/
 
 ## Objetivo:
  Realizar uma plataforma de inserção de notas do semestre de um grupo de alunos:
