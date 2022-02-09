@@ -11,22 +11,22 @@ Primeiro projeto desenvolvido em Squad através do curso técnico<br>
 - Figma
 
    ### Layout do projeto
-   ![WEB](https://github.com/MatheusAlvarez/Projeto-CadastroDeAlunos/blob/main/_assets/principal.PNG)
+   ![WEB](https://github.com/Innovation-Skyline0/Cadastro-de-Aluno/blob/main/_assets/principal.PNG)
 
     ### botão adicionar aluno
-   ![WEB](https://github.com/MatheusAlvarez/Projeto-CadastroDeAlunos/blob/main/_assets/btn-addAluno.PNG)
+   ![WEB](https://github.com/Innovation-Skyline0/Cadastro-de-Aluno/blob/main/_assets/btn-addAluno.PNG)
 
    ### botão adicionar nota
-   ![WEB](https://github.com/MatheusAlvarez/Projeto-CadastroDeAlunos/blob/main/_assets/btn-addNota.PNG)
+   ![WEB](https://github.com/Innovation-Skyline0/Cadastro-de-Aluno/blob/main/_assets/btn-addNota.PNG)
 
    ### botão remover aluno
-   ![WEB](https://github.com/MatheusAlvarez/Projeto-CadastroDeAlunos/blob/main/_assets/btn-apagarAluno.PNG)
+   ![WEB](https://github.com/Innovation-Skyline0/Cadastro-de-Aluno/blob/main/_assets/btn-apagarAluno.PNG)
 
    ### botão remover nota
-   ![WEB](https://github.com/MatheusAlvarez/Projeto-CadastroDeAlunos/blob/main/_assets/btn-apagarNota.PNG) 
+   ![WEB](https://github.com/Innovation-Skyline0/Cadastro-de-Aluno/blob/main/_assets/btn-apagarNota.PNG) 
    
    ### botão média
-   ![WEB](https://github.com/MatheusAlvarez/Projeto-CadastroDeAlunos/blob/main/_assets/btn-media.PNG) 
+   ![WEB](https://github.com/Innovation-Skyline0/Cadastro-de-Aluno/blob/main/_assets/btn-media.PNG) 
 
 
 ## Gerenciamento do projeto:
