@@ -15,12 +15,14 @@ let cellsNumber = 7;
 function verificaMedias(){
     nomes = []
     mediaList = []
-    mediaGeral = 0
+    let mediaGeral = 0
+    let media = 0
+
     for(let y = 1; y <= qtdAluno; y = y + 1){
         let resultado = 0
         for(let x = 1; x <= (cellsNumber - 3); x = x + 1){
-            let nota = parseFloat(document.getElementById(`nota${y}${x}`).value)
-            resultado = nota + resultado
+           let nota = parseFloat(document.getElementById(`nota${y}${x}`).value);
+            resultado = nota + resultado;
         }
         let media = resultado/(cellsNumber-3)
         document.getElementById(`media${y}`).innerText = media
@@ -39,31 +41,37 @@ function verificaMedias(){
 
         mediaGeral += media;
 
+
         nomeAluno = document.getElementById(`aluno${y}`).value;
         mediaAluno = document.getElementById(`media${y}`).value;
+
+
 
         nomes.push(nomeAluno);
         mediaList.push(mediaAluno);
     }
+    mediaFinal = mediaGeral/qtdAluno
+
 }
 
-
-function media_Geral(){
-    console.log(mediaGeral/qtdAluno)
+function media_geral(){
+    
+    document.getElementById("Media_Final").innerText = mediaFinal
 }
 
 // Função para adicionar Aluno
-function adicionar_aluno(){ 
+function adicionar_aluno(){
+    let y = qtdAluno
     if(qtdAluno < 10){
     var table = document.getElementById("table");
     let x = 1;
-    var row = table.insertRow(1);
-    row.insertCell(0).innerHTML = `<input id = "aluno${y}" type="text" class = "form-control input" placeholder="Nome"> `;
+    var row = table.insertRow(qtdAluno+1);
+    row.insertCell(0).innerHTML = `<input id = "aluno${y+1}" type="text" class = "form-control" placeholder="Nome"> `;
     for(x; x < cellsNumber - 2; x++){
-        row.insertCell(x).innerHTML  = `<input id = "nota${y}${x}" type="text" class = "form-control input" placeholder="Nota ${x}"> `;
+        row.insertCell(x).innerHTML  = `<input id = "nota${y+1}${x}" type="text" class = "form-control" placeholder="Nota ${x}"> `;
     }
-    row.insertCell(x).innerHTML = `<output id = "media${y}"></output> `;
-    row.insertCell(x+1).innerHTML = `<output id = "situacao${y}"></output> `;
+    row.insertCell(x).innerHTML = `<output id = "media${y+1}"></output> `;
+    row.insertCell(x+1).innerHTML = `<output id = "situacao${y+1}"></output> `;
     qtdAluno = qtdAluno + 1
     y = y + 1
 }
@@ -105,12 +113,14 @@ function adicionar_nota(){
         }
     }
 }
-
+//Problema esta aqui!!!!!!!!!!!
 // Função apagar aluno
 function apagar_aluno(){
+    let y = qtdAluno
     if(qtdAluno >= 1){
-    document.getElementById("table").deleteRow(qtdAluno);
+    document.getElementById("table").deleteRow(y);
     qtdAluno = qtdAluno - 1
+    y = y - 1
     }
     else{
         alert("Não tem mais alunos para apagar")
@@ -190,11 +200,38 @@ function imprimirArray(id, array) {
     let span = document.getElementById(id);
     span.innerHTML = '';
     for (let i = 0; i < array.length; i++) {
-        span.innerHTML += '<b> Aluno: </b>' + array[i].nome + '<br><b> Média: </b>' + array[i].media + '<br/><br>';
+        span.innerHTML += array[i].nome + ', Média: ' + array[i].media + '<br/>';
     }
 }
 
 
-function ordemAlfabetica(){
-    alert("Não foi possível colocar em ordem alfabética")
+function ordem(){
+    let lista = [];
+    for (let cont = 0; cont < qtdAluno; cont += 1){
+       //Cria a pessoa 1
+        let pessoa = {
+        nome: nomes[cont],
+        media: mediaList[cont]
+        };
+        
+        lista.push(pessoa);
+    }
+    lista.sort(function(a, b) {
+        if(a.nome < b.nome) {
+          return -1;
+        } else {
+          return true;
+        }
+      });  
+      
+      imprimirArray1('ordem_alfabetica', lista);
+}
+
+
+function imprimirArray1(id, array) {
+    let span = document.getElementById(id);
+    span.innerHTML = '';
+    for (let i = 0; i < array.length; i++) {
+        span.innerHTML += array[i].nome + ', Média: ' + array[i].media + '<br/>';
+    }
 }
