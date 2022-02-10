@@ -113,7 +113,7 @@ function adicionar_nota(){
         }
     }
 }
-//Problema esta aqui!!!!!!!!!!!
+
 // Função apagar aluno
 function apagar_aluno(){
     let y = qtdAluno
