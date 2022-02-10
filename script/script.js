@@ -80,7 +80,7 @@ function adicionar_aluno(){
     }
 }
 
-// Função para adicionar nota
+// Função para adicionar nota.
 function adicionar_nota(){
     var myTable = document.getElementById("table")
     if(qtdAluno == 0){
@@ -114,7 +114,7 @@ function adicionar_nota(){
     }
 }
 
-// Função apagar aluno
+// Função apagar aluno.
 function apagar_aluno(){
     let y = qtdAluno
     if(qtdAluno >= 1){
