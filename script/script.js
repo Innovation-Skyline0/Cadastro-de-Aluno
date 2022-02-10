@@ -189,7 +189,7 @@ function ordemDecrescente(){
         
         lista.push(pessoa);
     }
-    //Ordena as lista de acordo com a média da pessoa.
+    //Ordena as lista de acordo com a média da pessoa
     lista.sort((a, b) => b.media - a.media);
     //Imprime o array ordenado por media
     imprimirArray('spanOrdenadaPorMedia', lista);
