@@ -50,9 +50,12 @@ ul li:hover ul li{
     cursor: pointer;
 }
 
+.out{
+    margin-top: 100px;
+}
+
 span{
     display: block;
-    background-color: rgb(191, 191, 192);
     width: 26vw;
     margin-top: 10px;
 }
