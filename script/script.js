@@ -45,18 +45,16 @@ function verificaMedias(){
         nomeAluno = document.getElementById(`aluno${y}`).value;
         mediaAluno = document.getElementById(`media${y}`).value;
 
-
-
         nomes.push(nomeAluno);
         mediaList.push(mediaAluno);
     }
-    mediaFinal = mediaGeral/qtdAluno
+    mediaFinal = mediaGeral/qtdAluno;
 
 }
 
 function media_geral(){
     
-    document.getElementById("Media_Final").innerText = "Média geral da turma: " + mediaFinal
+    document.getElementById("Media_Final").innerText = "Média geral da turma: " + mediaFinal.toLocaleString('pt-br', {minimumFractionDigits: 2});
 }
 
 // Função para adicionar Aluno
@@ -199,28 +197,6 @@ function ordemDecrescente(){
     document.getElementById("Media_Final").innerText = "";
     }
 
-function ordem(){
-    let lista = [];
-    for (let cont = 0; cont < qtdAluno; cont += 1){
-       //Cria a pessoa 1
-        let pessoa = {
-        nome: nomes[cont],
-        media: mediaList[cont]
-        };
-
-        lista.push(pessoa);
-    }
-    lista.sort(function(a, b) {
-        if(a.nome < b.nome) {
-          return -1;
-        } else {
-          return true;
-        }
-      });  
-
-      imprimirArray1('ordem_alfabetica', lista);
-}
-
 // Função para imprimir array
 function imprimirArray(id, array) {
     let span = document.getElementById(id);
@@ -229,7 +205,6 @@ function imprimirArray(id, array) {
         span.innerHTML += "<b>Aluno:</b> " + array[i].nome + '<br><b>Média:</b> ' + array[i].media + '<br/><br>';
     }
 }
-
 
 function ordem_alfabetica() {
     let lista = [];
@@ -250,13 +225,5 @@ function ordem_alfabetica() {
         }
     });
 
-    imprimirArray1('ordem_alfabetica', lista);
-}
-
-function imprimirArray1(id, array) {
-    let span = document.getElementById(id);
-    span.innerHTML = '';
-    for (let i = 0; i < array.length; i++) {
-        span.innerHTML += array[i].nome + ', Média: ' + array[i].media + '<br/>';
-    }
+    imprimirArray('spanOrdenadaPorMedia', lista);
 }
