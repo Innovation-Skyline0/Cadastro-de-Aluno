@@ -199,6 +199,28 @@ function ordemDecrescente(){
     document.getElementById("Media_Final").innerText = "";
     }
 
+function ordem(){
+    let lista = [];
+    for (let cont = 0; cont < qtdAluno; cont += 1){
+       //Cria a pessoa 1
+        let pessoa = {
+        nome: nomes[cont],
+        media: mediaList[cont]
+        };
+
+        lista.push(pessoa);
+    }
+    lista.sort(function(a, b) {
+        if(a.nome < b.nome) {
+          return -1;
+        } else {
+          return true;
+        }
+      });  
+
+      imprimirArray1('ordem_alfabetica', lista);
+}
+
 // Função para imprimir array
 function imprimirArray(id, array) {
     let span = document.getElementById(id);
