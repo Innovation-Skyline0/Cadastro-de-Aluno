@@ -56,7 +56,7 @@ function verificaMedias(){
 
 function media_geral(){
     
-    document.getElementById("Media_Final").innerText = mediaFinal
+    document.getElementById("Media_Final").innerText = "Média geral da turma: " + mediaFinal
 }
 
 // Função para adicionar Aluno
@@ -174,7 +174,9 @@ function ordemCrescente(){
     lista.sort((a,b) => a.media - b.media);
     //Imprime o array ordenado por media
     imprimirArray('spanOrdenadaPorMedia', lista);
-    }
+
+    document.getElementById("Media_Final").innerText = "";
+}
 
 // Função para ordem decrescente
 function ordemDecrescente(){
@@ -193,6 +195,8 @@ function ordemDecrescente(){
     lista.sort((a, b) => b.media - a.media);
     //Imprime o array ordenado por media
     imprimirArray('spanOrdenadaPorMedia', lista);
+
+    document.getElementById("Media_Final").innerText = "";
     }
 
 // Função para imprimir array
@@ -200,7 +204,7 @@ function imprimirArray(id, array) {
     let span = document.getElementById(id);
     span.innerHTML = '';
     for (let i = 0; i < array.length; i++) {
-        span.innerHTML += array[i].nome + ', Média: ' + array[i].media + '<br/>';
+        span.innerHTML += "<b>Aluno:</b> " + array[i].nome + '<br><b>Média:</b> ' + array[i].media + '<br/><br>';
     }
 }
 
