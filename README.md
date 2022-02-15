@@ -43,6 +43,7 @@ Primeiro projeto desenvolvido em Squad através do curso técnico<br>
   [Rafaela Mascarenhas](https://github.com/RafaelaMascarenhas "GitHub da Rafaela")<br>
   [Thiago Messias](https://github.com/Thmsantos "GitHub do Thiago")<br>
   [Luccas Thiago](https://github.com/LuccasThiago "GitHub do Luccas")<br>
-  [Pedro Palugan](https://github.com/pedropalugan "GitHub do Pedro")
+  [Pedro Palugan](https://github.com/pedropalugan "GitHub do Pedro")<br>
+  [Maria de Lourdes](https://github.com/MariaLourdesS")
 
     
